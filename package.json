@@ -1,0 +1,14 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "start": "npm run watch:all"
+  },
+  "author": "ben",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "node-modules": "^1.0.1"
+  }
+}

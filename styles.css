@@ -1,0 +1,258 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+
+*{
+padding: 0;
+margin:0;
+box-sizing: border-box;
+
+
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-image: linear-gradient(to right, #000000, #37adcd);
+    color: white
+}
+
+.container{
+    width: 95%;
+    margin: auto;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 25px 0;
+}
+.fas{
+    font-size: 60px;
+}
+
+
+.nav h1{
+    font-size: 2.5em;
+}
+
+.title{
+    padding-top: 50px;
+    text-align: center;
+    margin: auto;
+    
+}
+.user-input{
+    padding-top: 100px;
+    width: 600px;
+    text-align: center;
+    margin: auto;
+    
+}
+
+.user-input input{
+    width: 80%;
+    outline: none;
+    padding: 8px;
+    border: 1px solid lightgray;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    font-size: 1em;
+    -webkit-transition: all 0.40s ease-in-out;
+    -moz-transition:  all 0.40s ease-in-out;
+    -ms-transition:  all 0.40s ease-in-out;
+    -o-transition:  all 0.40s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+.user-input input:focus{
+    box-shadow: 0 0 5px #e22865;
+    border: 1px solid #e22865;
+}
+
+.user-input button{
+    cursor:pointer;
+    padding: 8px;
+    width: fit-content;
+    transition: 1s;
+    outline: none;
+    background-color: lightgray;
+    border: 1px solid lightgray;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.user-input button:hover{
+    background-color: transparent;
+    color: white;
+
+}
+
+.to-do-items{
+    width: 600px;
+    margin:auto;
+    margin-top: 50px;
+
+}
+
+
+.item{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: auto; /* this is in case user has a long to do item */
+    border-radius: 2px;
+    padding: 16px; /* space between items on todolist */
+    color: #454545;
+    margin-top: 10px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    -webkit-transition: all 0.40s ease-in-out;
+    -moz-transition:  all 0.40s ease-in-out;
+    -ms-transition:  all 0.40s ease-in-out;
+    -o-transition:  all 0.40s ease-in-out;
+    transition: all 0.30s ease-in-out;
+}
+
+.item:hover{
+    box-shadow: 0 0 20px #e22865;
+    border: 1px solid #e22865;
+}
+
+.item i{
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.toDoItems li.limegreen{
+    text-decoration: overline;
+}
+
+@media(max-width:760px){
+    .nav{
+        align-items: center;
+        flex-direction: column;
+    }
+    .nav h2{
+        margin: 10px 0;
+    }
+    .user-input{
+        width: 100px;
+    }
+
+    .to-do-items{
+        width: 100%;
+    }
+}
+
+@media(max-width:480px){
+    .user-input input{
+        width: 74px;
+    }
+}
+
+@media(max-width:320px){
+    .user-input input{
+        width: 60px;
+    }
+}
+
+
+/* The sidebar menu */
+.sidebar {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+ 
+  }
+  
+  /* The sidebar links */
+  .sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  .sidebar a:hover {
+    color: #f1f1f1;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #111;
+    color: white;
+    padding: 15px 22px;
+    border: none;
+    margin-top: 1px;
+    margin-right: 2px;
+    position:absolute;
+    top:0;
+    right:0;
+    border-radius: 16px;
+  }
+  .openbtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .openbtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .openbtn:hover span {
+    padding-right: 25px;
+  }
+  
+  .openbtn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  
+  .openbtn:hover {
+    background-color: #444;
+  }
+  
+  
+  #main {
+    transition: margin-Right 0.5s;
+    padding: 20px;
+    
+  }
+  
+ 
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
